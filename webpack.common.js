@@ -8,24 +8,36 @@ module.exports = {
 	entry: './src/app.js',
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
-		rules: [{
-			test: /.js$/,
-			exclude: /node_modules/,
-			use: [{
-				loader: 'babel-loader',
-				options: {
-					cacheDirectory: true
-				}
-			}]
-		}]
+		rules: [
+			{
+				test: /.js$/,
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: 'babel-loader',
+						options: {
+							cacheDirectory: true
+						}
+					}
+				]
+			}, {
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true
+						}
+					}
+				]
+			}
+		]
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({
-			template: './src/index.html',
-		})
+		new HtmlWebpackPlugin({template: './src/index.html'})
 	]
 }
