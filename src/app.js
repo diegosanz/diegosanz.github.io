@@ -11,10 +11,7 @@ import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-rout
 
 import reducers from './reducers'
 
-// Components
-import Home from './components/home.js'
-import About from './components/about.js'
-import Blog from './components/blog.js'
+import router from './router/router'
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()
@@ -37,11 +34,7 @@ const store = createStore(
 ReactDOM.render(
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
-			<div>
-				<Route exact path = "/" component = { Home } />
-				<Route path = "/about" component = { About } />
-				<Route path = "/blog" component = { Blog } />
-			</div>
+			{ router() }
 		</ConnectedRouter>
 	</Provider>,
 	document.getElementById('root')
