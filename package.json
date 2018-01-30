@@ -1,7 +1,7 @@
 {
-	"name": "mi_web",
+	"name": "react_router_redux_starter",
 	"version": "0.1.0",
-	"description": "Mi personal website",
+	"description": "React router redux starter files",
 	"author": "Diego Sanz",
 	"main": "src/index.js",
 	"scripts": {
