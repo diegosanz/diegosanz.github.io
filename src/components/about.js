@@ -6,7 +6,7 @@ export default class About extends Component {
 		return (
 			<div>
 				<h1>About</h1>
-				<Link to={`/`} >Home</Link>
+				<Link to={`/`} >&lt; Back to Home</Link>
 			</div>
 		)
 	}
