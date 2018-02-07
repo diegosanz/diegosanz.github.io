@@ -1,13 +1,16 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 
-export default class Blog extends Component {
+import Container from './container.js'
+import TopNavbar from './navbar.js'
+
+export default class Home extends Component {
 	render() {
 		return (
-			<div>
-				<h1>Blog</h1>
-				<Link to={`/`} >&lt; Back to Home</Link>
-			</div>
+			<Container>
+				<TopNavbar/>
+				<h1 className="title">Blog</h1>
+			</Container>
 		)
 	}
 }
