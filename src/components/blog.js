@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Container from './container.js'
 import TopNavbar from './navbar.js'
 
-export default class Home extends Component {
+export default class Blog extends Component {
 	render() {
 		return (
 			<Container>

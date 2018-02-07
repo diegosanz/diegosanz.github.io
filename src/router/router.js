@@ -1,8 +1,8 @@
 import React from "react";
-import {Route, Switch} from "react-router";
+import {Route, Switch, Redirect} from "react-router";
 
 // Components
-import Home from './../components/home.js'
+import Projects from './../components/projects.js'
 import About from './../components/about.js'
 import Blog from './../components/blog.js'
 import Error404 from './../components/error404.js'
@@ -10,9 +10,10 @@ import Error404 from './../components/error404.js'
 function router() {
 	return (
 		<Switch>
-			<Route exact path = "/" component = { Home } />
+			<Redirect exact from="/" to="/about" />
 			<Route path = "/about" component = { About } />
 			<Route path = "/blog" component = { Blog } />
+			<Route path = "/proyectos" component = { Projects } />
 			<Route component={ Error404 } />
 		</Switch>
 	);

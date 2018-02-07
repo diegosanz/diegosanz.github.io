@@ -19,8 +19,9 @@ export default class TopNavbar extends Component {
 
 				<div className="navbar-menu">
 					<div className="navbar-start">
-						<Link to={`/`} className="navbar-item" style={{ color: "white" }}>Home</Link>
 						<Link to={`/blog`} className="navbar-item" style={{ color: "white" }}>Blog</Link>
+						<Link to={`/about`} className="navbar-item" style={{ color: "white" }}>Acerca de mí</Link>
+						<Link to={`/proyectos`} className="navbar-item" style={{ color: "white" }}>Proyectos</Link>
 					</div>
 
 					<div className="navbar-end">
