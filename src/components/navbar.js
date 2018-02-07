@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {Link} from 'react-router-dom'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 export default class TopNavbar extends Component {
 
@@ -28,7 +29,7 @@ export default class TopNavbar extends Component {
 								<p className="control">
 									<a className="bd-tw-button button" data-social-network="Github" target="_blank" href="https://github.com/diegosanz">
 										<span>
-											GitHub
+											<FontAwesomeIcon icon={["fab", "github"]} size="lg" /> GitHub
 										</span>
 									</a>
 								</p>
