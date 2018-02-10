@@ -1,7 +1,7 @@
 {
-	"name": "react_router_redux_starter",
+	"name": "diegosanz.github.io",
 	"version": "0.1.0",
-	"description": "React router redux starter files",
+	"description": "Diego Sanz personal website",
 	"author": "Diego Sanz",
 	"main": "src/index.js",
 	"scripts": {
