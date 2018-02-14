@@ -1,12 +1,31 @@
 import React, {Component} from "react"
 import {Link} from 'react-router-dom'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import styled from 'styled-components'
+
+const Navbar = styled.nav`
+	&&& {
+		margin: 15px 0;
+		background: black;
+		color: white;
+	}
+`
+
+const NavbarLink = styled(Link)`
+	&&& {
+		background: black;
+	}
+
+	&&&:hover {
+		background: #1F1F1F;
+	}
+`
 
 export default class TopNavbar extends Component {
 
 	render() {
 		return (
-			<nav style={{ margin: '15px 0', background: "black", color: "white" }} className="navbar" role="navigation" aria-label="main navigation">
+			<Navbar className="navbar" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
 					<Link to={`/`} className="navbar-item" style={{ color: "orange", fontWeight: "bold", marginLeft: "16px" }}>Diego Sanz</Link>
 
@@ -19,9 +38,9 @@ export default class TopNavbar extends Component {
 
 				<div className="navbar-menu">
 					<div className="navbar-start">
-						<Link to={`/blog`} className="navbar-item" style={{ color: "white" }}>Blog</Link>
-						<Link to={`/about`} className="navbar-item" style={{ color: "white" }}>Acerca de mí</Link>
-						<Link to={`/proyectos`} className="navbar-item" style={{ color: "white" }}>Proyectos</Link>
+						<NavbarLink to={`/blog`} className="navbar-item" style={{ color: "white" }}>Blog</NavbarLink>
+						<NavbarLink to={`/about`} className="navbar-item" style={{ color: "white" }}>Acerca de mí</NavbarLink>
+						<NavbarLink to={`/proyectos`} className="navbar-item" style={{ color: "white" }}>Proyectos</NavbarLink>
 					</div>
 
 					<div className="navbar-end">
@@ -38,7 +57,7 @@ export default class TopNavbar extends Component {
 						</div>
 					</div>
 				</div>
-			</nav>
+			</Navbar>
 		);
 	}
 }
